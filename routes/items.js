@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource for users index');
+  res.send('respond with a resource for food items index');
 });
 
 module.exports = router;
