@@ -62,4 +62,45 @@ router.get('/:id', function(request, response) {
   })
 });
 
+//just showing the edit form. have to pass in which user to edit
+router.get('/:id/edit', function (request, response) {
+  var userId = request.params.id;
+  User.findById(userId)
+  .exec(function (error, userToEdit) {
+    if(error) {
+      console.log('error trying to get edit form for user: '+userId);
+      return;
+    }
+    response.render('users/edit', {
+      userToEdit : userToEdit
+    });
+  })
+})
+
+//handle the update request made by the edit form
+router.patch('/:id', function (request, response) {
+  var userId = request.params.id;
+  User.findByIdAndUpdate(userId, {
+    name: request.body.name,
+    email: request.body.email,
+    favorite_food: request.body.favorite_food
+  }, {new: true})
+  .exec(function (error, updatedUser) {
+    if(error) {
+      console.log('error updating user '+userId+': '+error);
+      return;
+    }
+    response.render('users/show', {
+      user : updatedUser
+    });
+  });
+});
+
+
+
+
+
+
+
+
 module.exports = router;

@@ -1,0 +1,11 @@
+<h1>Edit Your Pantry</h1>
+
+<form method="POST" action="/users/{{userToEdit._id}}?_method=PATCH">
+    Name: <input type="text" name="name" value="{{userToEdit.name}}"><br>
+    Email: <input type="text" name="email" value="{{userToEdit.email}}"><br>
+    Favorite Food: <input type="text" name="favorite_food" value="{{userToEdit.favorite_food}}"><br>
+    <input type="submit">
+</form>
+
+<a href='/users/{{userToEdit._id}}'>Not {{userToEdit.name}}? Go Back</a>
+
