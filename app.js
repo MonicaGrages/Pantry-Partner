@@ -8,7 +8,7 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
 var db = require('./db/db.js')
-mongoose.connect('mongodb://localhost/project_2'); //this is referring to the db name
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/project_2'); //this is referring to the db name
 
 var index = require('./routes/index.js');
 var users = require('./routes/users.js');
@@ -18,7 +18,7 @@ require('dotenv').config();
 
 var app = express();
 
-mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect(process.env.MONGODB_URI);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
