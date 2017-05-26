@@ -15,8 +15,10 @@
   {{/each}}
 </div>
 
+
+
 <p><a href='/users'>Browse Other Pantries</a></p>
 <p><a href='/users/new'>Create Your Pantry Now</a></p>
 <p>Are you {{user.name}}? <a href='/users/{{user._id}}/edit'> Edit </a>or <form action="/users/{{user._id}}?_method=DELETE" method="POST">
   <input type="submit" value="DELETE" class="btn btn-danger"/>
-</form> This Pantry</p>
+</form> This Pantry or <a href='/users/{{user._id}}/items/new'>Add a New Food Item</a></p>

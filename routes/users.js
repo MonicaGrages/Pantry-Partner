@@ -97,6 +97,7 @@ router.patch('/:id', function (request, response) {
 });
 
 
+
 router.delete('/:id', function(request, response) {
   var userId = request.params.id;
   User.findByIdAndRemove(userId)
@@ -110,9 +111,13 @@ router.delete('/:id', function(request, response) {
 });
 
 
-
-
-
+router.get('/:id/items/new', function(request, response) {
+  //show the new item page
+  userId = request.params.id
+  response.render('items/new', {
+    userId : userId
+  });
+})
 
 
 

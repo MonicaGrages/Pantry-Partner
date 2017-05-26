@@ -1,0 +1,18 @@
+
+<h1>Add an Item to Your Pantry</h1>
+
+<form method="POST" action="/users/{{userId}}/items">
+    Food Name: <input type="text" name="name" value="{{user.items.name}}"><br>
+    Food Group: <input type="text" name="email" value="{{user.items.food_group}}"><br>
+    Expiration Date: <input type="text" name="favorite_food" value="{{user.items.favorite_food}}"><br>
+    <input type="submit">
+</form>
+
+<a href='/users/{{userId}}'>Nevermind</a>
+
+
+  name: String,
+  food_group: String,
+  expirationDate: Date,
+  expired: Boolean,
+  comments: String
