@@ -16,14 +16,36 @@ router.get('/', function(request, response) {
         usersList : usersList
       })
     })
-
 });
 
 
-//show the new user form
+//Show the new user form
 router.get('/new', function (request, response) {
-  response.send('show the new user form here');
+  response.render('users/new');
 });
+
+
+//Create a new user based on new user form input
+router.post('/', function(request, response) {
+  var newUserInfo = request.body;
+  //get the new user's info from the form input
+  var newUser = new User({
+    name : newUserInfo.name,
+    email : newUserInfo.email,
+    favorite_food : newUserInfo.favorite_food
+  });
+  //save the newUser to the db
+  newUser.save(function(error, newUser) {
+    if(error) {
+      console.log('error when adding new user: '+error);
+      return;
+    }
+    console.log('new user saved');
+    //redirect to users index page after saving
+    response.redirect('/users');
+  })
+})
+
 
 
 module.exports = router;
