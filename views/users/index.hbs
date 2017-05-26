@@ -1,0 +1,16 @@
+<h1>This is the users index page</h1>
+
+<ul>
+{{#each usersList}}
+  <li>
+    <div>Name: {{name}}</div>
+    <div>Favorite Food: {{favorite_food}}</div>
+    <a href='/users/{{_id}}'>See {{name}}'s Pantry</a>
+    <br><br>
+  </li>
+
+{{/each}}
+</ul>
+
+<p><a href='/'>Go back to the home page</a></p>
+<p><a href='/users/new'>Create Your Pantry Now</a></p>

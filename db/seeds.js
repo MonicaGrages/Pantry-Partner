@@ -34,14 +34,39 @@ var monica = new User({
     }]
 });
 
+var clark = new User({
+  name: 'Clark',
+  email: 'Clark@clark.com',
+  favorite_food: 'country fried steak',
+  items: [{
+    name: "bananas",
+    food_group: "fruits",
+    expired: false,
+    comments: "gonna make bananas foster"
+    },
+    {
+    name: "marinara sauce",
+    food_group: "vegetables",
+    expirationDate: new Date("Mar 04, 2018"),
+    expired: false,
+    }]
+});
+
 
 monica.save(function(error) {
   if (error) {
     console.log(error);
     return;
   }
-
   console.log('Monica created!');
+});
+
+clark.save(function(error) {
+  if (error) {
+    console.log(error);
+    return;
+  }
+  console.log('Clark created!');
 });
 
 
