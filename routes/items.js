@@ -9,5 +9,11 @@ router.get('/', function(req, res, next) {
   //maybe it should just redirect to home page?
 });
 
+//item show page
+// router.get('/:id', function (request, response) {
+//   response.render('items/show', {
+//     itemId : request.params.id
+//   });
+// })
 
 module.exports = router;

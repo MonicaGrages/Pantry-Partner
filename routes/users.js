@@ -57,7 +57,8 @@ router.get('/:id', function(request, response) {
       return;
     }
     response.render('users/show', {
-      user : user
+      user : user,
+      userId : userId
     });
   })
 });
@@ -96,8 +97,7 @@ router.patch('/:id', function (request, response) {
   });
 });
 
-
-
+//handles delete request from button on user show page
 router.delete('/:id', function(request, response) {
   var userId = request.params.id;
   User.findByIdAndRemove(userId)
@@ -110,14 +110,52 @@ router.delete('/:id', function(request, response) {
   });
 });
 
-
-router.get('/:id/items/new', function(request, response) {
+//show the new item form. must be tied to user id
+router.get('/:userId/items/new', function(request, response) {
   //show the new item page
-  userId = request.params.id
+  userId = request.params.userId
   response.render('items/new', {
     userId : userId
   });
 })
+
+//create a new item
+//handles post request from new item form
+router.post('/:userId/items', function(request, response) {
+  var userId = request.params.userId;
+  var newItem = request.body;
+  User.findById(userId)
+  .exec(function(error, user) {
+    user.items.push(new FoodItem ({
+      name: newItem.name,
+      food_group: newItem.food_group,
+      expiration_date: newItem.expiration_date,
+      comments: newItem.comments
+    }));
+    user.save(function (error) {
+      if(error) {
+        console.log('error deleting user '+userId+' ; '+error);
+        return;
+      }
+      response.redirect('/users/'+userId);
+    });
+  });
+});
+
+
+// item show page
+// need to fix link on user show page
+router.get('/:userId/items/:itemId', function (request, response) {
+  var userId = request.params.userId;
+  var itemId = request.params.itemId;
+  response.send('hello');
+});
+
+
+
+
+
+
 
 
 
