@@ -1,2 +1,19 @@
-<h1>This is the user show page</h1>
-{{user}}
+
+<h1>{{user.name}}'s Pantry</h1>
+
+<ul>
+  <li>{{user.email}}</li>
+  <li>Favorite Food: {{user.favorite_food}}</li>
+</ul>
+
+<div class='fridge'>
+  {{#each user.items}}
+  <a href='/items/{{_id}}'>
+    <div>{{name}}
+    </div>
+  </a>
+  {{/each}}
+</div>
+
+<p><a href='/'>Go back to the home page</a></p>
+<p><a href='/users/new'>Create Your Pantry Now</a></p>
