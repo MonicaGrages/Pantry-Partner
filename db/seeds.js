@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/pantry_partner');
+mongoose.connect('mongodb://localhost/project_2');
 
 var User = require("../models/user.js");
 var FoodItem = require("../models/item.js");
