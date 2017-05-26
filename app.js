@@ -8,7 +8,7 @@ var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
 var db = require('./db/db.js')
-mongoose.connect('mongodb://localhost/pantry_partner');
+mongoose.connect('mongodb://localhost/pantry_partner'); //this is referring to the db name
 
 var index = require('./routes/index.js');
 var users = require('./routes/users.js');

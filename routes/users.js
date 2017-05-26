@@ -6,17 +6,17 @@ var FoodItem = require('../models/item.js')
 
 /* Index route for showing all users */
 router.get('/', function(request, response) {
-    // User.find({})
-    // .exec(function (error, usersList) {
-    //   if(error) {
-    //     console.log('Error trying to get usersList: '+error);
-    //     return;
-    //   }
-    //   response.render('users/index', {
-    //     usersList : usersList
-    //   })
-    // })
-    response.render('users/index');
+    User.find({})
+    .exec(function (error, usersList) {
+      if(error) {
+        console.log('Error trying to get usersList: '+error);
+        return;
+      }
+      response.render('users/index', {
+        usersList : usersList
+      })
+    })
+
 });
 
 //show the new user form
