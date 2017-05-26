@@ -19,6 +19,7 @@ router.get('/', function(request, response) {
 
 });
 
+
 //show the new user form
 router.get('/new', function (request, response) {
   response.send('show the new user form here');
