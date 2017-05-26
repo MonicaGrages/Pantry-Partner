@@ -97,6 +97,19 @@ router.patch('/:id', function (request, response) {
 });
 
 
+router.delete('/:id', function(request, response) {
+  var userId = request.params.id;
+  User.findByIdAndRemove(userId)
+  .exec(function(error, userToDelete) {
+    if(error) {
+      console.log('error deleting user '+userId+' : '+error);
+      return;
+    }
+    response.redirect('/users');
+  });
+});
+
+
 
 
 
