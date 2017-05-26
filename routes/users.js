@@ -40,12 +40,26 @@ router.post('/', function(request, response) {
       console.log('error when adding new user: '+error);
       return;
     }
-    console.log('new user saved');
+    console.log('new user saved: '+ newUserInfo.name);
     //redirect to users index page after saving
     response.redirect('/users');
   })
 })
 
-
+//this is the user show route
+router.get('/:id', function(request, response) {
+  //store the id url parameter as a variable
+  var userId = request.params.id;
+  User.findById(userId)
+  .exec(function(error, user) {
+    if(error) {
+      console.log('error finding user '+userId+' : '+error);
+      return;
+    }
+    response.render('users/show', {
+      user : user
+    });
+  })
+});
 
 module.exports = router;
