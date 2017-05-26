@@ -4,16 +4,20 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var mongoose = require('mongoose');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var items = require('./routes/items');
+var db = require('./db/db.js')
+mongoose.connect('mongodb://localhost/pantry_partner');
+
+var index = require('./routes/index.js');
+var users = require('./routes/users.js');
+var items = require('./routes/items.js');
 
 require('dotenv').config();
 
 var app = express();
 
-var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
 // view engine setup
@@ -27,10 +31,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/', items);
 app.use('/items', items);
 
 // catch 404 and forward to error handler
