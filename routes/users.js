@@ -129,7 +129,7 @@ router.post('/:userId/items', function(request, response) {
     user.items.push(new FoodItem ({
       name: newItem.name,
       food_group: newItem.food_group,
-      expiration_date: newItem.expiration_date,
+      expirationDate: newItem.expirationDate,
       comments: newItem.comments
     }));
     user.save(function (error) {
@@ -160,6 +160,37 @@ router.get('/:userId/items/:itemId/edit', function (request, response) {
       foodToEdit : foodToEdit,
       itemId : itemId,
       userId : userId
+    })
+  })
+});
+
+
+//handles put request made by the food edit form
+router.put('/:userId/items/:itemId', function (request, response) {
+  var userId = request.params.userId;
+  var itemId = request.params.itemId;
+  //grab the input from the edit form, comes as an object
+  var updatedFoodObject = request.body;
+  // console.log(updatedFoodObject);
+  //to update a food item first we have to find the user it belongs to
+  User.findById(userId)
+  .exec (function(error, user) {
+    if (error) {
+      console.log('error finding user '+userId+' during item update :'+error);
+      return;
+    }
+    var foodToEdit = user.items.find(function (item) {
+      return item.id === itemId;
+    });
+    //set the properties of the food to update to the updated food object (from form request.body)
+    foodToEdit.name = updatedFoodObject.name;
+    foodToEdit.food_group = updatedFoodObject.food_group;
+    foodToEdit.expirationDate = updatedFoodObject.expirationDate;
+    foodToEdit.comments = updatedFoodObject.comments;
+
+    //save the updates to the user (because this is an embedded document)
+    user.save(function (error, user) {
+      response.redirect ('/users/'+userId+'/items/'+itemId);
     })
   })
 });

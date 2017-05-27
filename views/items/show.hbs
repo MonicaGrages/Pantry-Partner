@@ -1,11 +1,9 @@
 <h1>{{foodToShow.name}}</h1>
 <p>Comments/Recipe Ideas: {{foodToShow.comments}}
 <p>Food Group: {{foodToShow.food_group}}</p>
-<p>Expiration Date: {{foodToShow.expiration_date}}</p>
+<p>Expiration Date: {{foodToShow.expirationDate}}</p>
 
 <a href='/users/{{user._id}}'>Go back to {{user.name}}'s Pantry</a>
-
-/users/{{user._id}}/items/{{foodToShow._id}}/edit
 
 
 <p>Are you {{user.name}}? <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'> Edit </a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">

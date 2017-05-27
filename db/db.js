@@ -4,6 +4,7 @@ var db = mongoose.connection;
 
 mongoose.promise = global.Promise;
 
+
 // CONNECTION EVENTS
 db.once('open', function() {
   console.log("Opened mongoose.");
