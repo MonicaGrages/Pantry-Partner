@@ -143,6 +143,28 @@ router.post('/:userId/items', function(request, response) {
 });
 
 
+//show the food item edit form
+router.get('/:userId/items/:itemId/edit', function (request, response) {
+  var userId = request.params.userId;
+  var itemId = request.params.itemId;
+  User.findById(userId)
+  .exec(function (error, user) {
+    if (error) {
+      console.log(error);
+      return;
+    }
+    var foodToEdit = user.items.find(function (item) {
+      return item.id === itemId;
+    });
+    response.render('items/edit', {
+      foodToEdit : foodToEdit,
+      itemId : itemId,
+      userId : userId
+    })
+  })
+});
+
+
 // item show page
 // need to fix link on user show page
 router.get('/:userId/items/:itemId', function (request, response) {
@@ -150,22 +172,19 @@ router.get('/:userId/items/:itemId', function (request, response) {
   var itemId = request.params.itemId;
   User.findById(userId)
   .exec (function (error, user){
-    var itemToShow = user.items.find(function (item) {
+    var foodToShow = user.items.find(function (item) {
       return item.id === itemId;
     })
     response.render('items/show', {
     itemId : itemId,
     userId : itemId,
     user : user,
-    itemToShow : itemToShow
+    foodToShow : foodToShow
     });
   });
 });
 
-//show the item edit form
-router.get(':userId/items/:itemId/edit', function (request, response) {
 
-});
 
 
 

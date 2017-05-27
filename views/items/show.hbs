@@ -1,11 +1,13 @@
-<h1>{{itemToShow.name}}</h1>
-<p>Comments/Recipe Ideas: {{itemToShow.comments}}
-<p>Food Group: {{itemToShow.food_group}}</p>
-<p>Expiration Date: {{itemToShow.expiration_date}}</p>
-
+<h1>{{foodToShow.name}}</h1>
+<p>Comments/Recipe Ideas: {{foodToShow.comments}}
+<p>Food Group: {{foodToShow.food_group}}</p>
+<p>Expiration Date: {{foodToShow.expiration_date}}</p>
 
 <a href='/users/{{user._id}}'>Go back to {{user.name}}'s Pantry</a>
 
-<p>Are you {{user.name}}? <a href='/users/{{user._id}}/items/{{itemToShow._id}}/edit'> Edit </a>or <form action="/users/{{user._id}}/items/itemToShow._id?_method=DELETE" method="POST">
+/users/{{user._id}}/items/{{foodToShow._id}}/edit
+
+
+<p>Are you {{user.name}}? <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'> Edit </a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">
   <input type="submit" value="DELETE" class="btn btn-danger"/>
 </form> This Food

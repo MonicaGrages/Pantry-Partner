@@ -1,0 +1,11 @@
+<h1>Edit Your {{foodToEdit.name}}</h1>
+
+<form method="POST" action="/users/{{userId}}/items/{{itemId}}">
+    Food Name: <input type="text" name="name"><br>
+    Food Group: <input type="text" name="food_group"><br>
+    Expiration Date (if listed): <input type="date" name="expirationDate"><br>
+    Recipe Ideas: <input type="text" name="comments"><br>
+    <input type="submit">
+</form>
+
+<a href='/users/{{userId}}/items/{{itemId}}'>Nevermind</a>
