@@ -197,7 +197,6 @@ router.put('/:userId/items/:itemId', function (request, response) {
 
 
 // item show page
-// need to fix link on user show page
 router.get('/:userId/items/:itemId', function (request, response) {
   var userId = request.params.userId;
   var itemId = request.params.itemId;
@@ -216,7 +215,24 @@ router.get('/:userId/items/:itemId', function (request, response) {
 });
 
 
-
+//delete an item
+router.delete('/:userId/items/:itemId', function(request, response) {
+  console.log('delete route called');
+  var userId = request.params.userId;
+  var itemId = request.params.itemId;
+  User.findByIdAndUpdate(userId, {
+    $pull: {
+      items: {_id : itemId}
+    }
+  })
+  .exec(function (error, user) {
+    if (error) {
+      console.log('error deleting item '+itemId+' : '+error);
+      return;
+    }
+    response.redirect('/users/'+userId);
+  })
+});
 
 
 
