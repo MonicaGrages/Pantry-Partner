@@ -162,9 +162,10 @@ router.get('/:userId/items/:itemId', function (request, response) {
   });
 });
 
+//show the item edit form
+router.get(':userId/items/:itemId/edit', function (request, response) {
 
-
-
+});
 
 
 
