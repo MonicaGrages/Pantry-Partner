@@ -148,7 +148,18 @@ router.post('/:userId/items', function(request, response) {
 router.get('/:userId/items/:itemId', function (request, response) {
   var userId = request.params.userId;
   var itemId = request.params.itemId;
-  response.send('hello');
+  User.findById(userId)
+  .exec (function (error, user){
+    var itemToShow = user.items.find(function (item) {
+      return item.id === itemId;
+    })
+    response.render('items/show', {
+    itemId : itemId,
+    userId : itemId,
+    user : user,
+    itemToShow : itemToShow
+    });
+  });
 });
 
 
