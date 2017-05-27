@@ -4,7 +4,7 @@ var router = express.Router();
 var User = require('../models/user.js');
 var FoodItem = require('../models/item.js')
 
-/* Index route for showing all users */
+//Show all users/index page
 router.get('/', function(request, response) {
   User.find({})
     .exec(function (error, usersList) {
@@ -20,6 +20,7 @@ router.get('/', function(request, response) {
 
 
 //Show the new user form
+//don't need to pass in any info because nothing is created yet
 router.get('/new', function (request, response) {
   response.render('users/new');
 });
@@ -57,6 +58,7 @@ router.get('/:id', function(request, response) {
       return;
     }
     response.render('users/show', {
+      //pass in everything we want to have available in the hbs view
       user : user,
       userId : userId
     });
@@ -202,10 +204,13 @@ router.get('/:userId/items/:itemId', function (request, response) {
   var itemId = request.params.itemId;
   User.findById(userId)
   .exec (function (error, user){
+    //because this is an embedded item we have to find the user it belongs to first
+    //and then find the item by id inside of the user
     var foodToShow = user.items.find(function (item) {
       return item.id === itemId;
     })
     response.render('items/show', {
+      //pass in everything we want available in the hbs view
     itemId : itemId,
     userId : itemId,
     user : user,
@@ -217,10 +222,10 @@ router.get('/:userId/items/:itemId', function (request, response) {
 
 //delete an item
 router.delete('/:userId/items/:itemId', function(request, response) {
-  console.log('delete route called');
   var userId = request.params.userId;
   var itemId = request.params.itemId;
   User.findByIdAndUpdate(userId, {
+    //because this is an embedded item we have to first find the user it belongs to
     $pull: {
       items: {_id : itemId}
     }
@@ -230,10 +235,10 @@ router.delete('/:userId/items/:itemId', function(request, response) {
       console.log('error deleting item '+itemId+' : '+error);
       return;
     }
+    //go back to the user show page after deleting the item
     response.redirect('/users/'+userId);
   })
 });
-
 
 
 
