@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.expiration_message {
+  color: red;
+}
+
+.expired_date {
+  color: red;
+}
