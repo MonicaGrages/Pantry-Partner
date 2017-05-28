@@ -64,6 +64,7 @@ a {
 
 .favorite_food {
   font-size: 18px;
+  color: black;
 }
 
 .expiration_message {
@@ -78,4 +79,5 @@ a {
   display: flex;
   justify-content: space-around;
 }
+
 
