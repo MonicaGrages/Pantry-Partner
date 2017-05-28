@@ -29,8 +29,26 @@ a {
   letter-spacing: 5px;
 }
 
+.pantries_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
 .each_pantry_index_page {
-  list-style-type: none;
+  height: 250px;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.link_to_each_pantry {
+  text-decoration: none;
 }
 
 .expiration_message {
@@ -39,5 +57,10 @@ a {
 
 .expired_date {
   color: red;
+}
+
+.footer_nav {
+  display: flex;
+  justify-content: space-around;
 }
 

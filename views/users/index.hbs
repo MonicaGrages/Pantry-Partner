@@ -1,17 +1,15 @@
 <h1 class="user_index_page_title">Click on a Pantry to See What's Cooking</h1>
 
-<ul class="pantries_list">
+<main class="pantries_list">
 {{#each usersList}}
-  <li class="each_pantry_index_page">
-    <a href='/users/{{_id}}'>See {{name}}'s Pantry</a>
-    <div>Favorite Food: {{favorite_food}}</div>
-
-    <br><br>
-  </li>
-
+  <div class="each_pantry_index_page">
+    <a class="link_to_each_pantry" href='/users/{{_id}}'>See {{name}}'s Pantry</a>
+    <p>Favorite Food: {{favorite_food}}</p>
+  </div>
 {{/each}}
-</ul>
+</main>
 
-<p><a href='/'>Go back to the home page</a></p>
-<p><a href='/users/new'>Create Your Pantry Now</a></p>
-
+<nav class='footer_nav'>
+  <a href='/'>Go back to the home page</a>
+  <a href='/users/new'>Create Your Pantry Now</a>
+</nav>
