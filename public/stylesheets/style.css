@@ -91,7 +91,6 @@ a {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-/*  margin-bottom: 25px;*/
 }
 
 .each_food {
@@ -160,6 +159,7 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
+  font-weight: 600;
   width: 100%;
   padding: 30px;
   margin: 0;
@@ -169,6 +169,7 @@ a {
 .footer_links {
   text-decoration: none;
   color: black;
+  font-weight: 600;
 }
 
 .footer_links:hover {
