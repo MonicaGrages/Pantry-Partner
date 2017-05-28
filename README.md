@@ -10,6 +10,8 @@
 
 Put wireframes and screenshots here
 
-#### Technologies utilized in this project: MongoDB, Mongoose, Node, Express, Handlebars, Javascript/JQuery, HTML, CSS
+Put ERDs here too
+
+#### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
 
 #### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, recipes ideas, and user photo upload capability.

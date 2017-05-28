@@ -1,22 +1,27 @@
-<div class='user_show_page'>
-   <div class='user_show_page_top'>
-    <h1>{{user.name}}'s Pantry</h1>
-    <ul>
-      <li>{{user.email}}</li>
-      <li>Favorite Food: {{user.favorite_food}}</li>
-    </ul>
-    <p><a href='/users'>Browse Other Pantries</a></p>
-    <p><a href='/users/new'>Create Your Pantry Now</a></p>
-    <p>Are you {{user.name}}? <a href='/users/{{userId}}/edit'> Edit </a>or <form action="/users/{{user._id}}?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE" class="btn btn-danger"/>
-    </form> This Pantry or <a href='/users/{{user._id}}/items/new'>Add a New Food Item</a></p>
+
+  <h1 class="page_title">{{user.name}}'s Pantry</h1>
+  <div class="user_info">
+    <p>{{user.email}}</p>
+    <p>Favorite Food: {{user.favorite_food}}</p>
   </div>
-  <div class='pantry_items'>
-    {{#each user.items}}
-    <a href='/users/{{../user._id}}/items/{{_id}}'>
-      <div>{{name}}
+
+<div class='pantry_items_container'>
+  {{#each user.items}}
+  <a class="each_food_link" href='/users/{{../user._id}}/items/{{_id}}'>
+    <div class="each_food">
+      <p>{{name}}</p>
+      <div class="food_group_image_container">
+        <img class="food_group_image" src="/images/{{food_group}}.png">
       </div>
-    </a>
-    {{/each}}
-  </div>
+    </div>
+  </a>
+  {{/each}}
 </div>
+
+<nav>
+  <p><a href='/users'>Browse Other Pantries</a></p>
+  <p><a href='/users/new'>Create Your Pantry Now</a></p>
+  <p>Are you {{user.name}}? <a href='/users/{{userId}}/edit'> Edit </a>or <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE" class="btn btn-danger"/>
+    </form> This Pantry or <a href='/users/{{user._id}}/items/new'>Add a New Food Item</a></p>
+</nav>

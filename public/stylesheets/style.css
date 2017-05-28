@@ -8,7 +8,7 @@ a {
   color: #00B7FF;
 }
 
-.page_title {
+.home_page_title {
   font-size: 90px;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 5px;
@@ -24,7 +24,7 @@ a {
   margin-right: 50px;
 }
 
-.user_index_page_title {
+.page_title {
   font-size: 60px;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 5px;
@@ -43,7 +43,7 @@ a {
   background-image: url('http://i.imgur.com/ssg8As1.png');
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: 25px;
+  margin: 25px;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
@@ -65,6 +65,47 @@ a {
 .favorite_food {
   font-size: 18px;
   color: black;
+}
+
+.user_info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.pantry_items_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.each_food {
+  height: 250px;
+  width: 250px;
+/*  border: 2px solid black;
+  border-radius: 8px;*/
+  margin: 25px;
+}
+
+.each_food_link {
+  text-decoration: none;
+  color: black;
+}
+
+.food_group_image_container {
+  height: 150px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 200px;
+/*  text-align: center;*/
+}
+
+.food_group_image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  z-index: -1;
 }
 
 .expiration_message {
