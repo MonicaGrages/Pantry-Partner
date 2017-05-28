@@ -23,6 +23,15 @@ a {
   margin-right: 50px;
 }
 
+.user_index_page_title {
+  font-size: 60px;
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 5px;
+}
+
+.each_pantry_index_page {
+  list-style-type: none;
+}
 
 .expiration_message {
   color: red;

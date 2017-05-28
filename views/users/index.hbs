@@ -1,11 +1,11 @@
-<h1>This is the users index page</h1>
+<h1 class="user_index_page_title">Click on a Pantry to See What's Cooking</h1>
 
-<ul>
+<ul class="pantries_list">
 {{#each usersList}}
-  <li>
-    <div>Name: {{name}}</div>
-    <div>Favorite Food: {{favorite_food}}</div>
+  <li class="each_pantry_index_page">
     <a href='/users/{{_id}}'>See {{name}}'s Pantry</a>
+    <div>Favorite Food: {{favorite_food}}</div>
+
     <br><br>
   </li>
 
