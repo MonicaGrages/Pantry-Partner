@@ -2,10 +2,12 @@
 
 <main class="pantries_list">
 {{#each usersList}}
-  <div class="each_pantry_index_page">
-    <a class="link_to_each_pantry" href='/users/{{_id}}'>See {{name}}'s Pantry</a>
-    <p>Favorite Food: {{favorite_food}}</p>
+  <a class="link_to_each_pantry" href='/users/{{_id}}'>
+    <div class="each_pantry_index_page">
+      <p class="pantry_name">See {{name}}'s Pantry</p>
+      <p>Favorite Food: {{favorite_food}}</p>
   </div>
+</a>
 {{/each}}
 </main>
 
