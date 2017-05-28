@@ -2,6 +2,9 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -54,7 +57,7 @@ a {
 }
 
 .each_pantry_index_page:hover {
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 3px 3px 3px #888888;
 }
 
 
@@ -82,6 +85,7 @@ a {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .each_food {
@@ -110,7 +114,7 @@ a {
 }
 
 .food_group_image_container:hover {
-  box-shadow: 5px 5px 5px #888888;
+  box-shadow: 3px 3px 3px #888888;
 }
 
 .food_group_image {
@@ -123,22 +127,6 @@ a {
 
 .expired_date {
   color: red;
-}
-
-.user_show_footer_nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 15px;
-}
-
-.user_show_links {
-  text-decoration: none;
-  color: black;
-}
-
-.user_show_links:hover {
-  text-shadow: 3px 3px 3px #888888;
 }
 
 .edit_delete_pantry {
@@ -158,7 +146,22 @@ a {
 
 .footer_nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding: 30px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+.footer_links {
+  text-decoration: none;
+  color: black;
+}
 
+.footer_links:hover {
+  text-shadow: 3px 3px 3px #888888;
+}
