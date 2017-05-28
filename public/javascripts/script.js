@@ -15,8 +15,9 @@ if ($('.expirationDate').length > 0) {
     if (currentDate > expirationDate) {
       $('.food_info').prepend('<p class="expiration_message">This food has expired</p>');
       $('.expirationDate').addClass('expired_date');
-      //and pretty print date instead of ISO format
-      $('.expirationDate').html(expirationDate.toLocaleDateString());
+
     }
+     //change date format instead of ISO
+    $('.expirationDate').html(expirationDate.toLocaleDateString());
   }
 }
