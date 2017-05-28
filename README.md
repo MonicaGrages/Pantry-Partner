@@ -3,7 +3,7 @@
 ### This is the first full-stack application I built for my Web Development Immersive class at General Assembly
 
 #### Pantry Partner is a meal-planning and food waste prevention tool
-####[Try it today!](https://fathomless-ocean-49836.herokuapp.com/)
+#### [Try it today!](https://fathomless-ocean-49836.herokuapp.com/)
 
 [Click here to see the Trello board for this project](https://trello.com/b/cwAsT9w7/wdi-project-2)
 
