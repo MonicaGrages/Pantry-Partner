@@ -1,13 +1,18 @@
 <h1 class='page_title'>{{foodToShow.name}}</h1>
 <div class='food_info'>
-<p>Recipe Ideas: {{foodToShow.comments}}</p>
-<p>Food Group: {{foodToShow.food_group}}</p>
-<p class="expiration_line">Expiration Date: <span class='expirationDate'>{{foodToShow.expirationDate}}</span></p>
+  <p>Recipe Ideas: {{foodToShow.comments}}</p>
+  <p>Food Group: {{foodToShow.food_group}}</p>
+  <p class="expiration_line">Expiration Date: <span class='expirationDate'>{{foodToShow.expirationDate}}</span></p>
+  <img class="food_group_image_show_page" src="/images/{{foodToShow.food_group}}.png">
 </div>
 
-<a href='/users/{{user._id}}'>Go back to {{user.name}}'s Pantry</a>
 
-
-<p>Are you {{user.name}}? <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'> Edit </a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">
-  <input type="submit" value="DELETE" class="btn btn-danger"/>
+<nav class="footer_nav">
+  <p><a class="footer_links" href='/users/{{user._id}}'>Go back to {{user.name}}'s Pantry</a></p>
+  <div class="edit_delete_pantry">
+    <p>Are you {{user.name}}?</p>
+    <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'><button class="edit_delete_button">Edit</button></a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">
+  <input class="edit_delete_button" type="submit" value="Delete" class="btn btn-danger"/>
 </form> This Food
+  </div>
+</nav>

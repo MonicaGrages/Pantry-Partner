@@ -117,8 +117,12 @@ a {
   box-shadow: 3px 3px 3px #888888;
 }
 
-.food_group_image {
+.food_group_image_index_page {
   height: 100%;
+}
+
+.food_group_image_show_page {
+  height:180px;
 }
 
 .expiration_message {
