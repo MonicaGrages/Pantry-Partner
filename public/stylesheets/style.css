@@ -7,6 +7,23 @@ a {
   color: #00B7FF;
 }
 
+.page_title {
+  font-size: 90px;
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 5px;
+}
+
+.home_page_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fridge_image {
+  margin-right: 50px;
+}
+
+
 .expiration_message {
   color: red;
 }
@@ -14,3 +31,4 @@ a {
 .expired_date {
   color: red;
 }
+
