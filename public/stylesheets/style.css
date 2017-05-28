@@ -38,16 +38,17 @@ a {
 }
 
 .each_pantry_index_page {
-  height: 250px;
-  width: 250px;
-  border: 2px solid black;
-  border-radius: 8px;
+  height: 350px;
+  width: 180px;
+  background-image: url('http://i.imgur.com/ssg8As1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-bottom: 25px;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -58,7 +59,11 @@ a {
 }
 
 .pantry_name {
-  font-size: 30px;
+  font-size: 25px;
+}
+
+.favorite_food {
+  font-size: 18px;
 }
 
 .expiration_message {
