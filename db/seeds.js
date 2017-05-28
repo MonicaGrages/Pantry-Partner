@@ -27,7 +27,7 @@ var monica = new User({
     },
     {
     name: "tofu",
-    food_group: "meat/protein",
+    food_group: "protein",
     expirationDate: new Date("May 29, 2017"),
     expired: false,
     comments: "tofu stir fry!"

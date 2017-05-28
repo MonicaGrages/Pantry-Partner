@@ -53,6 +53,10 @@ a {
   text-align: center;
 }
 
+.each_pantry_index_page:hover {
+  box-shadow: 5px 5px 5px #888888;
+}
+
 
 .link_to_each_pantry {
   text-decoration: none;
@@ -81,11 +85,15 @@ a {
 }
 
 .each_food {
-  height: 250px;
-  width: 250px;
-/*  border: 2px solid black;
-  border-radius: 8px;*/
-  margin: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  height: 230px;
+  width: 230px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .each_food_link {
@@ -98,14 +106,15 @@ a {
   width: 150px;
   border: 2px solid black;
   border-radius: 200px;
-/*  text-align: center;*/
+  overflow: hidden;
+}
+
+.food_group_image_container:hover {
+  box-shadow: 5px 5px 5px #888888;
 }
 
 .food_group_image {
-  position: relative;
-  overflow: hidden;
   height: 100%;
-  z-index: -1;
 }
 
 .expiration_message {
@@ -114,6 +123,37 @@ a {
 
 .expired_date {
   color: red;
+}
+
+.user_show_footer_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 15px;
+}
+
+.user_show_links {
+  text-decoration: none;
+  color: black;
+}
+
+.user_show_links:hover {
+  text-shadow: 3px 3px 3px #888888;
+}
+
+.edit_delete_pantry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit_delete_button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.edit_delete_button:hover {
+  box-shadow: 3px 3px 3px #888888;
 }
 
 .footer_nav {

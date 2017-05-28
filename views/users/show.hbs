@@ -1,9 +1,11 @@
 
-  <h1 class="page_title">{{user.name}}'s Pantry</h1>
-  <div class="user_info">
-    <p>{{user.email}}</p>
-    <p>Favorite Food: {{user.favorite_food}}</p>
-  </div>
+<h1 class="page_title">{{user.name}}'s Pantry</h1>
+<div class="user_info">
+  <p>{{user.email}}</p>
+  <p>Favorite Food: {{user.favorite_food}}</p>
+</div>
+
+<hr>
 
 <div class='pantry_items_container'>
   {{#each user.items}}
@@ -18,10 +20,15 @@
   {{/each}}
 </div>
 
-<nav>
-  <p><a href='/users'>Browse Other Pantries</a></p>
-  <p><a href='/users/new'>Create Your Pantry Now</a></p>
-  <p>Are you {{user.name}}? <a href='/users/{{userId}}/edit'> Edit </a>or <form action="/users/{{user._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE" class="btn btn-danger"/>
-    </form> This Pantry or <a href='/users/{{user._id}}/items/new'>Add a New Food Item</a></p>
+<nav class="user_show_footer_nav">
+  <p><a class="user_show_links" href='/users'>Browse Other Pantries</a></p>
+  <p><a class="user_show_links" href='/users/new'>Create Your Pantry Now</a></p>
+  <div class="edit_delete_pantry">
+    <p>Are you {{user.name}}?</p>
+    <a href='/users/{{userId}}/edit'><button class="edit_delete_button">Edit</button></a>
+    <p>or</p>
+    <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+      <input class="edit_delete_button" type="submit" value="Delete" class="btn btn-danger"/>
+    </form>  this Pantry or  <a href='/users/{{user._id}}/items/new'><button class="edit_delete_button"> Add a new food</button></a>
+  </div>
 </nav>
