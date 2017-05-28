@@ -1,10 +1,17 @@
-<h1>Edit Your {{foodToEdit.name}}</h1>
+<h1>Edit This Food</h1>
 
 <form method="POST" action="/users/{{userId}}/items/{{itemId}}?_method=PUT">
     Food Name: <input type="text" name="name" value="{{foodToEdit.name}}"><br>
-    Food Group: <input type="text" name="food_group" value="{{foodToEdit.food_group}}"><br>
-    Expiration Date (if listed): <input type="date" name="expirationDate" value="{{foodToEdit.expirationDate}}"><br>
+    Food Group: <input type="radio" name="food_group" value="fruits">Fruits
+      <input type="radio" name="food_group" value="vegetables">Vegetables
+      <input type="radio" name="food_group" value="grains">Grains
+      <input type="radio" name="food_group" value="protein">Protein
+      <input type="radio" name="food_group" value="dairy">Dairy
+      <input type="radio" name="food_group" value="sweets">Sweets
+      <input type="radio" name="food_group" value="fats">Fats/Oils
+      <input type="radio" name="food_group" value="other">Other<br>    Expiration Date (if listed): <input type="date" name="expirationDate" value="{{foodToEdit.expirationDate}}"><br>
     Recipe Ideas: <input type="text" name="comments" value="{{foodToEdit.comments}}"><br>
+    Photo: <input type='file'><br>
     <input type="submit">
 </form>
 
