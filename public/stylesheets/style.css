@@ -2,9 +2,6 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 a {
@@ -31,6 +28,7 @@ a {
   font-size: 60px;
   font-family: 'Amatic SC', cursive;
   letter-spacing: 5px;
+  margin: 0;
 }
 
 .pantries_list {
@@ -38,6 +36,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  margin-top: 50px;
 }
 
 .each_pantry_index_page {
@@ -75,9 +74,16 @@ a {
 }
 
 .user_info {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullet_separator {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .pantry_items_container {
@@ -85,7 +91,7 @@ a {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+/*  margin-bottom: 25px;*/
 }
 
 .each_food {
@@ -154,8 +160,6 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
-  position: fixed;
-  bottom: 10px;
   width: 100%;
   padding: 30px;
   margin: 0;
