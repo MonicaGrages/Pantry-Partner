@@ -12,8 +12,8 @@
   <p><a class="footer_links" href='/users/{{user._id}}'>Go back to {{user.name}}'s Pantry</a></p>
   <div class="edit_delete_pantry">
     <p>Are you {{user.name}}?</p>
-    <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'><button class="edit_delete_button">Edit</button></a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">
-  <input class="edit_delete_button" type="submit" value="Delete" class="btn btn-danger"/>
+    <a href='/users/{{user._id}}/items/{{foodToShow._id}}/edit'><button class="buttons">Edit</button></a>or <form action="/users/{{user._id}}/items/{{foodToShow._id}}?_method=DELETE" method="POST">
+  <input class="buttons" type="submit" value="Delete"/>
 </form> This Food
   </div>
 </nav>

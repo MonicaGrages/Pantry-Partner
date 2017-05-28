@@ -1,18 +1,21 @@
 
-<h1>Add an Item to Your Pantry</h1>
+<h1 class="page_title">Add an Item to Your Pantry</h1>
 
-<form method="POST" action="/users/{{userId}}/items">
-    Food Name: <input type="text" name="name"><br>
-    Food Group: <input type="radio" name="food_group" value="fruits">Fruits
-      <input type="radio" name="food_group" value="vegetables">Vegetables
-      <input type="radio" name="food_group" value="grains">Grains
-      <input type="radio" name="food_group" value="protein">Protein
-      <input type="radio" name="food_group" value="dairy">Dairy
-      <input type="radio" name="food_group" value="fats">Fats/Oils/Sweets
-      <input type="radio" name="food_group" value="other">Other<br>
-    Expiration Date (if listed): <input type="date" name="expirationDate"><br>
-    Recipe Ideas: <input type="text" name="comments"><br>
-    <input type="submit">
-</form>
+<div class="form_page_main">
+  <img class="food_group_image_show_page" src='/images/fruits.png' alt='fruits_image'>
+  <form class="form" method="POST" action="/users/{{userId}}/items">
+      <p>Food Name: <input type="text" name="name"></p>
+      <p>Food Group: <input type="radio" name="food_group" value="fruits" checked>Fruits
+        <input type="radio" name="food_group" value="vegetables">Vegetables
+        <input type="radio" name="food_group" value="grains">Grains
+        <input type="radio" name="food_group" value="protein">Protein
+        <input type="radio" name="food_group" value="dairy">Dairy
+        <input type="radio" name="food_group" value="fats">Fats/Oils/Sweets
+        <input type="radio" name="food_group" value="other">Other</p>
+      <p>Expiration Date (if listed): <input type="date" name="expirationDate"></p>
+      <p>Recipe Ideas: <input type="text" name="comments"></p>
+      <input type="submit">
+  </form>
+</div>
 
-<a href='/users/{{userId}}'>Nevermind</a>
+<a class="footer_links" href='/users/{{userId}}'>Nevermind</a>

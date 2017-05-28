@@ -1,11 +1,15 @@
 
 <h1 class="page_title">Create Your Pantry</h1>
+<hr>
 
-<form method="POST" action="/users">
-    Name: <input type="text" name="name" value="{{user.name}}"><br>
-    Email: <input type="text" name="email" value="{{user.email}}"><br>
-    Favorite Food: <input type="text" name="favorite_food" value="{{user.favorite_food}}"><br>
-    <input type="submit">
-</form>
+<div class="form_page_main">
+  <img class="fridge_image_form_page" src='http://clipartpen.com/wp-content/uploads/2017/03/cartoon-fridge-clipart.gif' alt='refrigerator_clip_art'>
+  <form class="form" method="POST" action="/users">
+      <p>Name: <input type="text" name="name" value="{{user.name}}"></p>
+      <p>Email: <input type="text" name="email" value="{{user.email}}"></p>
+      <p>Favorite Food: <input type="text" name="favorite_food" value="{{user.favorite_food}}"></p>
+      <input class="buttons" type="submit">
+  </form>
+</div>
 
-<a href='/'>Nevermind</a>
+<a class="footer_links" href='/'>Nevermind</a>

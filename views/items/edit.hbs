@@ -1,8 +1,8 @@
-<h1>Edit This Food</h1>
+<h1 class='page_title'>Edit This Food</h1>
 
 <form method="POST" action="/users/{{userId}}/items/{{itemId}}?_method=PUT">
     Food Name: <input type="text" name="name" value="{{foodToEdit.name}}"><br>
-    Food Group: <input type="radio" name="food_group" value="fruits">Fruits
+    Food Group: <input type="radio" name="food_group" value="fruits" checked>Fruits
       <input type="radio" name="food_group" value="vegetables">Vegetables
       <input type="radio" name="food_group" value="grains">Grains
       <input type="radio" name="food_group" value="protein">Protein

@@ -31,6 +31,23 @@ a {
   margin: 0;
 }
 
+.form_page_main {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.fridge_image_form_page {
+  height: 230px;
+}
+
 .pantries_list {
   display: flex;
   flex-wrap: wrap;
@@ -145,12 +162,12 @@ a {
   align-items: center;
 }
 
-.edit_delete_button {
+.buttons {
   margin-left: 2px;
   margin-right: 2px;
 }
 
-.edit_delete_button:hover {
+.buttons:hover {
   box-shadow: 3px 3px 3px #888888;
 }
 
