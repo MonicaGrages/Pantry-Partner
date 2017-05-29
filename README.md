@@ -13,4 +13,4 @@ Put ERDs here too
 
 #### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
 
-#### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, recipes ideas, and user photo upload capability.
+#### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, notification when foods are about to expire (instead of having already expired), and user photo upload capability.
