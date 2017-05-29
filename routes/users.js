@@ -158,9 +158,10 @@ router.get('/:userId/items/:itemId/edit', function (request, response) {
     var foodToEdit = user.items.find(function (item) {
       return item.id === itemId;
     });
-    console.log(foodToEdit);
+    var expirationDateFormattedForForm = foodToEdit.expirationDate.toISOString().slice(0, 10);
     response.render('items/edit', {
       foodToEdit : foodToEdit,
+      expirationDate : expirationDateFormattedForForm,
       itemId : itemId,
       userId : userId
     })
