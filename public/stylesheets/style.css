@@ -178,7 +178,7 @@ a {
 
 .footer_nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 15px;
   font-weight: 600;
@@ -186,6 +186,7 @@ a {
   padding: 30px;
   margin: 0;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .footer_links {
@@ -225,11 +226,6 @@ a {
       border: 2px solid black;
       border-radius: 200px;
       overflow: hidden;
-    }
-    .buttons {
-      font-size: 22px;
-      font-weight: 600;
-      background-color: white;
     }
     .each_pantry_index_page {
       height: 583px;
@@ -272,8 +268,13 @@ a {
       height: 28px;
       font-size: 25px;
     }
+    .buttons {
+      font-size: 22px;
+      font-weight: 600;
+      background-color: white;
+    }
     .fridge_image_form_page {
-      height: 370px;
+      height: 490px;
       order: 1;
     }
     .food_group_image_show_page {
@@ -281,6 +282,6 @@ a {
       margin-top: 25px;
     }
     .food_info {
-      font-size: 30px;
+      font-size: 33px;
     }
 }

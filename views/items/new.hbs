@@ -5,7 +5,7 @@
   <img class="food_group_image_show_page" src='/images/fruits.png' alt='fruits_image'>
   <form class="form" method="POST" action="/users/{{userId}}/items">
       <p>Food Name: <input type="text" name="name"></p>
-      <p>Food Group: <input type="radio" name="food_group" value="fruits" checked>Fruits
+      <p>Food Group: <input type="radio" name="food_group" value="fruits" required>Fruits
         <input type="radio" name="food_group" value="vegetables">Vegetables
         <input type="radio" name="food_group" value="grains">Grains
         <input type="radio" name="food_group" value="protein">Protein
@@ -18,4 +18,6 @@
   </form>
 </div>
 
-<a class="footer_links" href='/users/{{userId}}'>Nevermind</a>
+<div class="footer_nav">
+  <a class="footer_links" href='/users/{{userId}}'>Nevermind</a>
+</div>
