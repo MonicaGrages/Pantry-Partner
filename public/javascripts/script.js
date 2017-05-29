@@ -46,8 +46,11 @@ $(function () {
       }
     }
 
-
-  // if ()
+  //If the food group is fats/oils/sweets, I simplified the value to fats,
+  //but I want it to display the whole name on item show page
+    if ($('.food_group_span').html() === 'fats') {
+    $('.food_group_span').html('fats, oils, and sweets');
+  }
 
 });
 

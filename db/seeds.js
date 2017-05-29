@@ -22,14 +22,12 @@ var monica = new User({
     name: "milk",
     food_group: "dairy",
     expirationDate: new Date("May 29, 2017"),
-    expired: false,
     comments: "for Friday night milkshakes"
     },
     {
     name: "tofu",
     food_group: "protein",
     expirationDate: new Date("May 29, 2017"),
-    expired: false,
     comments: "tofu stir fry!"
     }]
 });
