@@ -21,6 +21,31 @@ $(function () {
       $('.expirationDate').html(expirationDate.toLocaleDateString());
     }
   }
+
+
+    //this is not working yet
+    //if there are any expiration dates on the page (if on user show page)
+    if($('.user_page_expirationDate').length > 0) {
+      //for each expiration date
+      for(var i=0; i < ($('.user_page_expirationDate').length); i++) {
+        var $expirationDateElement = $('.user_page_expirationDate')[i];
+        // get the content of the element and turn it back into a date
+        var expirationDate = new Date($expirationDateElement.textContent);
+        console.log(expirationDate);
+        //set the current date to right now
+        var currentDate = new Date();
+        //check whether expiration date has passed
+        if (currentDate > expirationDate) {
+          console.log('food expired');
+          // $()
+        }
+        // $expirationDateElement.empty();
+        // $expirationDateElement.attr('visibility', 'hidden');
+      }
+    }
+
 });
+
+
 
 

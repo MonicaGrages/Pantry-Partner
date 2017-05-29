@@ -156,6 +156,13 @@ a {
   color: red;
 }
 
+/*this is probably not the best way to do this, but I wanted to have these expiration dates available on the page for browser javascript, but not visible*/
+.user_page_expirationDate {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
 .edit_delete_pantry {
   display: flex;
   justify-content: center;
