@@ -230,4 +230,18 @@ a {
       font-size: 20px;
       background-color: white;
     }
+    /*.pantries_list {
+      flex-direction: column;
+      align-items: center;
+    }*/
+    .each_pantry_index_page {
+      height: 583px;
+      width: 300px;
+    }
+    .pantry_name {
+      font-size: 40px;
+    }
+    .favorite_food {
+      font-size: 28px;
+    }
 }
