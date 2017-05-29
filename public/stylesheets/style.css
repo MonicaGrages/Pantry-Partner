@@ -197,3 +197,37 @@ a {
 .footer_links:hover {
   text-shadow: 3px 3px 3px #888888;
 }
+
+@media only screen and (max-width: 1000px) {
+    .footer_nav {
+      flex-direction: column;
+      font-size: 30px;
+    }
+    .page_title {
+      font-size: 100px;
+    }
+    .user_info {
+      font-size: 30px;
+    }
+    .pantry_items_container {
+/*      flex-direction: column;
+      align-items: center;*/
+    }
+    .each_food {
+      font-size: 35px;
+      height: 360px;
+      width: 360px;
+      margin: 15px;
+    }
+    .food_group_image_container {
+      height: 250px;
+      width: 250px;
+      border: 2px solid black;
+      border-radius: 200px;
+      overflow: hidden;
+    }
+    .buttons {
+      font-size: 20px;
+      background-color: white;
+    }
+}
