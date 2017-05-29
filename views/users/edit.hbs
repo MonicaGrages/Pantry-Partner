@@ -7,9 +7,10 @@
       <p>Name: <input type="text" name="name" value="{{userToEdit.name}}"></p>
       <p>Email: <input type="text" name="email" value="{{userToEdit.email}}"></p>
       <p>Favorite Food: <input type="text" name="favorite_food" value="{{userToEdit.favorite_food}}"></p>
-      <input type="submit">
+      <input class="buttons" type="submit">
   </form>
 </div>
 
-<a class="footer_links" href='/users/{{userToEdit._id}}'>Not {{userToEdit.name}}? Go Back</a>
-
+<div class="footer_nav">
+  <a class="footer_links" href='/users/{{userToEdit._id}}'>Not {{userToEdit.name}}? Go Back</a>
+</div>

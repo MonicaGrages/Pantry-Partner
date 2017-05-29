@@ -3,10 +3,10 @@
 <div class="form_page_main">
   <img class="food_group_image_show_page" src='/images/{{foodToEdit.food_group}}.png' alt='fruits_image'>
   <form class="form" method="POST" action="/users/{{userId}}/items/{{itemId}}?_method=PUT">
-    <p>Food Name:
+    <p class="form_line">Food Name:
       <input type="text" name="name" value="{{foodToEdit.name}}">
     </p>
-    <p>Food Group:
+    <p class="form_line">Food Group:
       <input type="radio" name="food_group" value="fruits" required>Fruits
       <input type="radio" name="food_group" value="vegetables">Vegetables
       <input type="radio" name="food_group" value="grains">Grains
@@ -15,14 +15,16 @@
       <input type="radio" name="food_group" value="fats">Fats/Oils/Sweets
       <input type="radio" name="food_group" value="other">Other
     </p>
-    <p>Expiration Date (if listed):
+    <p class="form_line">Expiration Date (if listed):
       <input type="date" name="expirationDate" value="{{expirationDate}}">
     </p>
-    <p>Recipe Ideas:
+    <p class="form_line">Recipe Ideas:
       <input type="text" name="comments" value="{{foodToEdit.comments}}">
     </p>
-    <input type="submit">
+    <input class="buttons" type="submit">
   </form>
 </div>
 
-<a class="footer_links" href='/users/{{userId}}/items/{{itemId}}'>Nevermind</a>
+<div class="footer_nav">
+  <a class="footer_links" href='/users/{{userId}}/items/{{itemId}}'>Nevermind</a>
+</div>

@@ -14,7 +14,7 @@ a {
   letter-spacing: 5px;
 }
 
-.home_page_main {
+.home_page {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -203,15 +203,15 @@ a {
       flex-direction: column;
       font-size: 30px;
     }
+    .footer_links {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
     .page_title {
-      font-size: 100px;
+      font-size: 90px;
     }
     .user_info {
       font-size: 30px;
-    }
-    .pantry_items_container {
-/*      flex-direction: column;
-      align-items: center;*/
     }
     .each_food {
       font-size: 35px;
@@ -227,13 +227,10 @@ a {
       overflow: hidden;
     }
     .buttons {
-      font-size: 20px;
+      font-size: 22px;
+      font-weight: 600;
       background-color: white;
     }
-    /*.pantries_list {
-      flex-direction: column;
-      align-items: center;
-    }*/
     .each_pantry_index_page {
       height: 583px;
       width: 300px;
@@ -243,5 +240,47 @@ a {
     }
     .favorite_food {
       font-size: 28px;
+    }
+    .home_page {
+      flex-direction: column;
+    }
+    .home_page_title {
+      font-size: 110px;
+    }
+    .home_page_blurb {
+      display: none;
+    }
+    .home_page_main {
+      order: 0;
+    }
+    .fridge_image {
+      margin: 0;
+      order: 1;
+    }
+    .form_page_main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .form {
+      order: 0;
+      font-size: 35px;
+      text-align: center;
+    }
+    form input, form button {
+      border: 1px solid black;
+      height: 28px;
+      font-size: 25px;
+    }
+    .fridge_image_form_page {
+      height: 370px;
+      order: 1;
+    }
+    .food_group_image_show_page {
+      height:250px;
+      margin-top: 25px;
+    }
+    .food_info {
+      font-size: 30px;
     }
 }
