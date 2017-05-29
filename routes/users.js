@@ -80,7 +80,7 @@ router.get('/:id/edit', function (request, response) {
   })
 })
 
-//handle the update request made by the edit form
+//handle the update request made by the user edit form
 router.patch('/:id', function (request, response) {
   var userId = request.params.id;
   User.findByIdAndUpdate(userId, {

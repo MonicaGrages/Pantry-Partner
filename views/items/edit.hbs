@@ -7,13 +7,13 @@
       <input type="text" name="name" value="{{foodToEdit.name}}">
     </p>
     <p class="form_line">Food Group:
-      <input type="radio" name="food_group" value="fruits" required>Fruits
-      <input type="radio" name="food_group" value="vegetables">Vegetables
-      <input type="radio" name="food_group" value="grains">Grains
-      <input type="radio" name="food_group" value="protein">Protein
-      <input type="radio" name="food_group" value="dairy">Dairy
-      <input type="radio" name="food_group" value="fats">Fats/Oils/Sweets
-      <input type="radio" name="food_group" value="other">Other
+      <input class="food_group" id='fruits' type="radio" name="food_group" value="fruits" required>Fruits
+      <input class="food_group" id='vegetables' type="radio" name="food_group" value="vegetables">Vegetables
+      <input class="food_group" id='grains' type="radio" name="food_group" value="grains">Grains
+      <input class="food_group" id='protein' type="radio" name="food_group" value="protein">Protein
+      <input class="food_group" id='dairy' type="radio" name="food_group" value="dairy">Dairy
+      <input class="food_group" id='fats' type="radio" name="food_group" value="fats">Fats/Oils/Sweets
+      <input class="food_group" id='other' type="radio" name="food_group" value="other">Other
     </p>
     <p class="form_line">Expiration Date (if listed):
       <input type="date" name="expirationDate" value="{{expirationDate}}">

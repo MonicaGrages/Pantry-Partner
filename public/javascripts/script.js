@@ -24,7 +24,7 @@ $(function () {
   }
 
 
-    //this is not working yet
+
     //if there are any expiration dates on the page (if on user show page)
     if($('.user_page_expirationDate').length > 0) {
       //for each expiration date
@@ -46,13 +46,43 @@ $(function () {
       }
     }
 
+
   //If the food group is fats/oils/sweets, I simplified the value to fats,
   //but I want it to display the whole name on item show page
-    if ($('.food_group_span').html() === 'fats') {
+  if ($('.food_group_span').html() === 'fats') {
     $('.food_group_span').html('fats, oils, and sweets');
   }
 
+
+  //if on a page with food group form class (food item edit page)
+  if ($('input.food_group').length > 0) {
+    //find the food group of the food based on the food group image shown (the food group is not otherwise listed on the page to grab)
+    var foodGroupImage = $('.food_group_image_show_page').attr('src');
+    //add the 'checked' attribute to the corresponding radio input option
+    switch (foodGroupImage) {
+      case '/images/protein.png':
+        $('#protein').attr('checked', true);
+        break;
+      case '/images/fruits.png':
+        $('#fruits').attr('checked', true);
+        break;
+      case '/images/vegetables.png':
+        $('#vegetables').attr('checked', true);
+        break;
+      case '/images/dairy.png':
+        $('#dairy').attr('checked', true);
+        break;
+      case '/images/fats.png':
+        $('#fats').attr('checked', true);
+        break;
+      case '/images/other.png':
+        $('#other').attr('checked', true);
+        break;
+      case '/images/grains.png':
+        $('#grains').attr('checked', true);
+    }
+  }
+
+
 });
-
-
 
