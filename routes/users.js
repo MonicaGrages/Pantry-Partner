@@ -158,6 +158,7 @@ router.get('/:userId/items/:itemId/edit', function (request, response) {
     var foodToEdit = user.items.find(function (item) {
       return item.id === itemId;
     });
+    console.log(foodToEdit);
     response.render('items/edit', {
       foodToEdit : foodToEdit,
       itemId : itemId,

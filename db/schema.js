@@ -8,7 +8,6 @@ var FoodItemSchema = new Schema({
   name: String,
   food_group: String,
   expirationDate: Date,
-  expired: Boolean,
   comments: String
 });
 
@@ -18,17 +17,6 @@ var UserSchema = new Schema({
   favorite_food: String,
   items: [FoodItemSchema]
 });
-
-UserSchema.pre('save', function(next){
-  now = new Date();
-  this.updated_at = now;
-  if ( !this.created_at ) {
-    this.created_at = now;
-  }
-  next();
-});
-
-
 
 
 var UserModel = mongoose.model("User", UserSchema);
