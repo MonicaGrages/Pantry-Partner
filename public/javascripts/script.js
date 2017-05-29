@@ -10,6 +10,7 @@ $(function () {
       var currentDate = new Date();
       //grab food expiration date from DOM and turn back into date object
       var expirationDate = new Date($('.expirationDate').html());
+      // expirationDate = expirationDate.toISOString();
 
       //check whether expiration date has passed
       if (currentDate > expirationDate) {
@@ -17,8 +18,8 @@ $(function () {
         $('.food_info').prepend('<p class="expiration_message">This food has expired</p>');
         $('.expirationDate').addClass('expired_date');
       }
-       //change date format instead of ISO
-      $('.expirationDate').html(expirationDate.toLocaleDateString());
+       //change date display to short form date
+      $('.expirationDate').html(expirationDate.toISOString().slice(0,10));
     }
   }
 
