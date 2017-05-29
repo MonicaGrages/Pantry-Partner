@@ -31,16 +31,17 @@ $(function () {
         var $expirationDateElement = $('.user_page_expirationDate')[i];
         // get the content of the element and turn it back into a date
         var expirationDate = new Date($expirationDateElement.textContent);
-        console.log(expirationDate);
+
         //set the current date to right now
         var currentDate = new Date();
         //check whether expiration date has passed
         if (currentDate > expirationDate) {
-          console.log('food expired');
-          // $()
+          //get the parent element of the expiration date span (it's the food name)
+          var expiredFoodName = $expirationDateElement.parentNode;
+          //add "- expired" to the end of it and add the expired class (has color: red)
+          expiredFoodName.append(' - expired');
+          $(expiredFoodName).addClass('expired_date');
         }
-        // $expirationDateElement.empty();
-        // $expirationDateElement.attr('visibility', 'hidden');
       }
     }
 

@@ -10,10 +10,9 @@
 
 <div class='pantry_items_container'>
   {{#each user.items}}
-  <p class="user_page_expirationDate">{{expirationDate}}</p>
   <a class="each_food_link" href='/users/{{../user._id}}/items/{{_id}}'>
     <div class="each_food">
-      <p>{{name}}</p>
+      <p class="user_show_page_food_name">{{name}}<span class="user_page_expirationDate">{{expirationDate}}</span></p>
       <div class="food_group_image_container">
         <img class="food_group_image_index_page" src="/images/{{food_group}}.png">
       </div>
