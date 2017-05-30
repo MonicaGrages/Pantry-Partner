@@ -9,8 +9,8 @@
 
 Put wireframes and screenshots here
 
-Put ERDs here too
+![Entity Relationship Diagram](http://i.imgur.com/oOpj2oo.jpg "Entity Relationship Diagram")
 
 #### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
 
-#### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, notification when foods are about to expire (instead of having already expired), and user photo upload capability.
+#### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, notification when foods are about to expire (instead of having already expired), graphical representation of the distribution of food groups in the user's pantry, and user photo upload capability.
