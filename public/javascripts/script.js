@@ -54,7 +54,7 @@ $(function () {
   }
 
 
-  //if on a page with food group form class (food item edit page)
+  //if on a page with food group input class (food item edit page)
   if ($('input.food_group').length > 0) {
     //find the food group of the food based on the food group image shown (the food group is not otherwise listed on the page to grab)
     var foodGroupImage = $('.food_group_image_show_page').attr('src');

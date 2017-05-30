@@ -83,11 +83,12 @@ a {
 
 .pantry_name {
   font-size: 25px;
+  color: #666666;
 }
 
 .favorite_food {
   font-size: 18px;
-  color: black;
+  color: #666666;
 }
 
 .user_info {
