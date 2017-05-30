@@ -3,7 +3,7 @@
 ### Pantry Partner is a meal-planning and food waste prevention tool
 ### [Try it here](https://pantry-partner.herokuapp.com/)
 
-### This is the first full-stack application I built for my Web Development Immersive class at General Assembly. It features full CRUD and RESTful routes with database interaction.
+### This is the first full-stack application I built for my Web Development Immersive class at General Assembly.
 #### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
 
 #### Styling and responsiveness remains one of my biggest challenges, so I opted for a simple approach to styling this project
