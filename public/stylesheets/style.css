@@ -20,6 +20,10 @@ a {
   justify-content: space-around;
 }
 
+.home_page_blurb {
+  color:#666666;
+}
+
 .fridge_image {
   margin-right: 50px;
 }
