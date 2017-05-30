@@ -9,13 +9,22 @@
 
 ## Screenshots and Wireframes
 
+![Home Page Screenshot](http://i.imgur.com/xQoIdo3l.png "Home Page Screenshot")
+
 #### User Show View
 ![User Show View Screenshot](http://i.imgur.com/jCgG4Txl.png "User Show View Screenshot")
 ![User Show View Mockup](http://i.imgur.com/zLfIdi2l.jpg "User Show View Mockup")
 
 
+#### Food Item Show View
+![Food Item Show View Screenshot](http://i.imgur.com/3PXFcz6l.png "Food Item Show View Screenshot")
+![Food Item Show View Mockup](http://i.imgur.com/yTL6Qpxl.jpg "Food Item Show View Mockup")
 
-### Entity Relationship Diagram
+#### Mobile View
+![Mobile View Screenshot](http://i.imgur.com/2i5OMXNl.png "Mobile View Screenshot")
+
+
+## Entity Relationship Diagram
 ![Entity Relationship Diagram](http://i.imgur.com/oOpj2oo.jpg "Entity Relationship Diagram")
 
 #### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
