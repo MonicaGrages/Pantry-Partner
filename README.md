@@ -10,7 +10,7 @@
 
 #### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, notification when foods are about to expire (instead of having already expired), graphical representation of the distribution of food groups in the user's pantry, and user photo upload capability.
 
-[Click here to see the Trello board for this project](https://trello.com/b/cwAsT9w7/wdi-project-2)
+#### [Click here to see the Trello board for this project](https://trello.com/b/cwAsT9w7/wdi-project-2)
 
 ## Screenshots and Wireframes
 
