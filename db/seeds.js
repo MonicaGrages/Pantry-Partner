@@ -39,14 +39,12 @@ var clark = new User({
   items: [{
     name: "bananas",
     food_group: "fruits",
-    expired: false,
     comments: "gonna make bananas foster"
     },
     {
     name: "marinara sauce",
     food_group: "vegetables",
     expirationDate: new Date("Mar 04, 2018"),
-    expired: false,
     }]
 });
 
@@ -66,5 +64,3 @@ clark.save(function(error) {
   }
   console.log('Clark created!');
 });
-
-
