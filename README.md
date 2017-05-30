@@ -33,6 +33,6 @@
 
 #### Technologies utilized in this project: Node/Express, Mongo/Mongoose, Javascript/JQuery, Handlebars, HTML, CSS
 
-#### Styling and responsiveness remains one of my biggest challenges, so I opted for a very simple approach to styling this project
+#### Styling and responsiveness remains one of my biggest challenges, so I opted for a simple approach to styling this project
 
 #### In version 2, I plan to incorporate nutrition information from the [USDA Food Composition Databases API](https://ndb.nal.usda.gov/ndb/doc/), as well as login authentication, notification when foods are about to expire (instead of having already expired), graphical representation of the distribution of food groups in the user's pantry, and user photo upload capability.
